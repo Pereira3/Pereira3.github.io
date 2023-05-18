@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+    background: rgb(0,40,205);
+    background: linear-gradient(325deg, rgba(0,40,205,1) 0%, rgba(0,22,113,1) 65%);
+}
+
+#BordaExterna{
+    display: block;
+    margin: 8%;
+    padding: 3%;
+    border: solid 4px;
+    border-radius: 10px;
+    border-color: rgb(0,40,205);
+    background-color: whitesmoke;
+}
+#Welcome{
+    margin: 0%;
+    padding: 0%;
+}
+#Texto{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
