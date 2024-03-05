@@ -1,0 +1,80 @@
+*{
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    opacity: 100%;
+    font-size: 20;
+    background-image: url("images/Background.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+}
+.navigation_bar{
+    margin: 2%;
+    padding: 1%;
+    text-align: center;
+    font-size: x-large;
+    background: transparent;
+    
+}
+.navigation_bar a{
+    padding-left: 5%;
+    padding-top: 5%;
+    transition: 0.8s;
+    text-decoration: none;
+}
+.navigation_bar a:hover{
+    color: rgb(0, 255, 170);
+    transform: translateX(0px, -100px);
+}
+
+.main_part{
+    margin: 4%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 1%;
+}
+.main_part a{
+    transition: 0.8s;
+    text-decoration: none;
+}
+.projects_list tbody{
+    margin: -25px 0;
+    display: block;
+    border-spacing: 0px 25px;
+}
+.projects_list td{
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px outset white;
+}
+.projects_list #Gemp_Title{
+    font-size: larger;
+}
+.projects_list #Gemp_Title:hover{
+    color: rgb(0, 255, 170);
+    text-decoration: underline;
+}
+.projects_list #Houdina_Img{
+    width: 60%;
+}
+.projects_list #Houdina_Title{
+    font-size: larger;
+}
+.projects_list #Houdina_Title:hover{
+    color: rgb(0, 255, 170);
+    text-decoration: underline;
+}
+.projects_list #Wordle_Img{
+    width: 60%;
+}
+.projects_list #Wordle_Title{
+    font-size: larger;
+}
+.projects_list #Wordle_Title:hover{
+    color: rgb(0, 255, 170);
+    text-decoration: underline;
+}
