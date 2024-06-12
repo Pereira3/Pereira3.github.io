@@ -1,0 +1,128 @@
+/* -------------------- GERAL -------------------- */
+*{
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    margin: 4%;
+    line-height: 1.4;
+    background-image: url("../images/Background.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+
+/* -------------------- PAGE STRUCTURE -------------------- */
+.structure{
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-areas: 'leftbar main';
+    column-gap: 5px;
+}
+.navigation_sidebar {
+    grid-area: leftbar;
+}
+.page-main {
+    grid-area: main;
+}
+.navsbar-Content{
+    margin: 4%;
+}
+
+/* -------------------- NAVIGATION BAR -------------------- */
+/* ---------- NAVIGATION BAR X ---------- */
+.xmenu{
+    cursor: pointer;
+    display: inline-block;
+}
+.top-bar, .middle-bar, .bottom-bar {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* To Produce the Animation to X */
+.changed .top-bar {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+.changed .middle-bar {opacity: 0;}
+.changed .bottom-bar {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+.navigation_sidebar{
+    border-right: 2px dashed #ffffff;
+}
+#navigation_menu{
+    display: none;
+    cursor: pointer;
+    font-size: 120%;
+}
+#navmen_button{
+    text-decoration: none;
+}
+.navigation_menu{
+    list-style-type: none;
+}
+#projects_menu{
+    display: none;
+    list-style-type: none;
+}
+.navigation_menu a{
+    transition: 0.8s;
+    text-decoration: none;
+}
+.navigation_menu a:hover {
+    color: rgb(0, 255, 170);
+    transform: translateX(0px, -100px);
+}
+.navigation_bar{
+    margin: 2%;
+    padding: 1%;
+    text-align: center;
+    font-size: x-large;
+    background: transparent;
+}
+
+
+/* -------------------- INDEX -------------------- */
+.page-main{
+    margin-left: 4%;
+    margin-right: 4%;
+    padding: 1%;
+}
+.page-main a{
+    transition: 0.8s;
+    text-decoration: none;
+}
+
+.projects_list tbody{
+    margin: -25px 0;
+    display: block;
+    border-spacing: 0px 25px;
+}
+.projects_list td{
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px outset white;
+}
+.projects_list .image{
+    text-align: center;
+}
+.projects_list .title{
+    font-size: larger;
+}
+.projects_list .title:hover{
+    color: rgb(0, 255, 170);
+    text-decoration: underline;
+}
+#Houdina_Img{
+    width: 60%;
+}
+#Wordle_Img{
+    width: 60%;
+}

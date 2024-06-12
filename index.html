@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+    <head>
+        <title>Pereira3 -> About Me</title>
+        <!-- Import CSS -->
+        <link rel="stylesheet" href="./styles/index.css">
+        <!-- Import Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Pages Icon -->
+        <link rel="icon" href="./images/Icon.png">
+    </head>   
+    <body>
+        <div class="structure">
+            <aside class="navigation_sidebar">
+                <div class="navsbar-Content">
+                    <!-- X Mark for the Menu -->
+                    <div class="xmenu" onclick="showMenu(this)">
+                        <div class="top-bar"></div>
+                        <div class="middle-bar"></div>
+                        <div class="bottom-bar"></div>
+                    </div>
+
+                    <div id="navigation_menu" style="display:none;">
+                        <ul class="navigation_menu">
+                            <li><a class="navmen_button fa fa-home" href="./index.html">&nbsp;About Me</a></li>
+                            <li class="dropdown">
+                                <a class="navmen_button fa fa-floppy-o" onclick="showProjMenu()">&nbsp;Projects</a>
+                                <ul id="projects_menu">
+                                    <li><a class="navmen_button fa fa-file-code-o" href="">&nbsp;Personal</a></li>
+                                    <li><a class="navmen_button fa fa-file-code-o" href="./uni_projects.html">&nbsp;University</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <main class="page-main">
+                <div class="content">
+                    <div class="pfp_image">
+                        <img src="./images/ToPFP.jpg" id="pfp">
+                        <div class="hello_gif" id="helloTo" style="display: none;"><img src="./images/hello.gif"></div>
+                    </div>
+                    <div class="main_part">
+                        Hello there! &#128075; <br><br>
+                        My name is Ricardo Pereira and I am currently finishing my degree in Computer Engineering. <br><br>
+                        To date, I have not yet created any project for my portfolio,
+                        the projects presented that I developed were carried out to complete some subjects,
+                        with "Houdina" being a project carried out in a group where I was responsible for a large part of the interface style 
+                        and developed the code presented in the folder 'Carros'. <br><br>
+                        What I've most enjoyed doing to date has been work related to cybersecurity or full-stack development.<br><br>
+                        This little guy on the left is called Tó.<br>
+                        Tó was a well-known public figure in my group and that's why he remains honored on my github/website.<br>
+                        <button id="button_to" type="button" onclick="helloTo()">Say hello to Tó.</button><br><br>
+                    </div>
+                </div>
+                <div class="media">
+                    <a href="https://github.com/Pereira3" id="ref_github" target="_blank"><img src="./images/GitHub.png" id="icon_github"></a>
+                    <a href="https://www.linkedin.com/in/ricardopereira03/" id="ref_linkedin" target="_blank"><img src="./images/LinkedIn.png" id="icon_linkedin"></a>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
+
+<script>
+    // When the 3 Bars are pressed, the menu will show up
+    function showMenu(x) {
+        var secondDiv = document.getElementById("navigation_menu");
+        // In case the menu is pressed the name of the class will be changed
+        x.classList.toggle("changed");
+        // If there is changed in the last part of the name, the menu will be displayed
+        if(x.classList.contains("changed")){
+            secondDiv.style.display = "block";
+        } else {
+            secondDiv.style.display = "none";
+        }
+    }
+
+
+    function showProjMenu() {
+        var projectsMenu = document.getElementById("projects_menu");
+        if (projectsMenu.style.display === "block") {
+            projectsMenu.style.display = "none";
+        } else {
+            projectsMenu.style.display = "block";
+        }
+    }
+
+    function helloTo() {
+        var helloGif = document.getElementById("helloTo");
+
+        if(helloGif.style.display === "none"){
+            helloGif.style.display = "block";
+            setTimeout(function() {
+                helloGif.style.display = "none";
+            }, 2000);
+        }
+    }
+</script>
