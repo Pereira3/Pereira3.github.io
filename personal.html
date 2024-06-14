@@ -1,13 +1,13 @@
 <!DOCTYPE html>
     <head>
-        <title>Pereira3 -> About Me</title>
+        <title>Pereira3 -> Projects</title>
         <!-- Import CSS -->
-        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet" href="./styles/projects.css">
         <!-- Import Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Pages Icon -->
         <link rel="icon" href="./images/Icon.png">
-    </head>   
+    </head>
     <body>
         <div class="structure">
             <aside class="navigation_sidebar">
@@ -34,29 +34,38 @@
                 </div>
             </aside>
             <main class="page-main">
-                <div class="content">
-                    <div class="pfp_image">
-                        <img src="./images/ToPFP.jpg" id="pfp">
-                        <div class="media">
-                            <a href="https://github.com/Pereira3" id="ref_github" target="_blank"><img src="./images/GitHub.png" id="icon_github"></a>
-                            <a href="https://www.linkedin.com/in/ricardopereira03/" id="ref_linkedin" target="_blank"><img src="./images/LinkedIn.png" id="icon_linkedin"></a>
-                        </div>
-                        <div class="hello_gif" id="helloTo" style="display: none;"><img src="./images/hello.gif"></div>
-                    </div>
-                    <div class="main_part">
-                        Hello there! &#128075; <br><br>
-                        My name is Ricardo Pereira and I am currently finishing my degree in Computer Engineering. <br><br>
-                        At the time, I have not yet created any project for my portfolio,
-                        the projects presented that I developed were carried out to complete some subjects,
-                        with "Houdina" being a project carried out in a group where I was responsible for a large part of the interface style 
-                        and developed the code presented in the folder 'Carros'. <br><br>
-                        What I've most enjoyed doing to date has been work related to cybersecurity or full-stack development.<br><br>
-                        This little guy on the left is called Tó.<br>
-                        Tó was a well-known public figure in my group and that's why he remains honored on my github/website.<br><br>
-                        <button class="button_to" id="button_to" type="button" onclick="helloTo()">Say hello to Tó</button>
-                        &emsp;<a href="to.html"><button class="button_to" id="button_moreofto" type="button">More of Tó</button><br><br></a>
-                    </div>
-                </div>
+                <table class="projects_list">
+                    <tr class="first">
+                        <td class="image">
+                            <a href="https://github.com/Pereira3/Unknown" target="_blank"> <img src="./images/University/Unity.png" alt="Unknown Logo" id="Unity_Img"></a>
+                        </td>
+                        <td class="content">
+                            <a href="https://github.com/Pereira3/Unknown" target="_blank" class="title">Unknown</a>
+                            <div id="Unk_Content">
+                                <p> Unknown is a game created as a final graduation project.<br>
+                                    The idea for Unknown was to create a simple, easy-to-understand game that would allow anyone of any age to play.
+                                    It is a platformer game, which consists of passing several levels with the aim of discovering the character's story.<br><br>
+                                    The game build was published on Itch.io: <a id="UnknownLink" target="_blank" href="https://pereira3.itch.io/unknown">Unknown</a>
+                                </p>
+                                <p> Were used Unity as a game engine (C# as a technology), VSCode as IDE and Itch.io and Unity Asset Store as asset source.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="second">
+                        <td class="image">
+                            <a href="https://github.com/Pereira3/Pereira3.github.io" target="_blank"> <img src="./images/Icon.png" alt="Website Logo" id="Website_Img"></a>
+                        </td>
+                        <td class="content">
+                            <a href="https://github.com/Pereira3/Pereira3.github.io" target="_blank" class="title">This Website</a>
+                            <div id="Website_Content">
+                                <p> Website where you are currently located.<br>
+                                    It focuses on presenting a piece of me and my projects.
+                                </p>
+                                <p> Were used HTML, CSS and Javascript as technologies.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>           
             </main>
         </div>
     </body>
@@ -83,17 +92,6 @@
             projectsMenu.style.display = "none";
         } else {
             projectsMenu.style.display = "block";
-        }
-    }
-
-    function helloTo() {
-        var helloGif = document.getElementById("helloTo");
-
-        if(helloGif.style.display === "none"){
-            helloGif.style.display = "block";
-            setTimeout(function() {
-                helloGif.style.display = "none";
-            }, 2000);
         }
     }
 </script>

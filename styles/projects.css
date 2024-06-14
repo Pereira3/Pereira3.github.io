@@ -95,34 +95,56 @@ body{
     padding: 1%;
 }
 .page-main a{
-    transition: 0.8s;
-    text-decoration: none;
+    transition: 0.5s;
+    text-decoration: underline white dashed;
 }
 
 .projects_list tbody{
     margin: -25px 0;
     display: block;
-    border-spacing: 0px 25px;
+    border-spacing: 5px 15px;
 }
 .projects_list td{
     background: rgba(0, 0, 0, 0.85);
     padding: 20px;
     border-radius: 10px;
-    border: 2px outset white;
 }
 .projects_list .image{
     text-align: center;
+    border: 2px white;
+    border-style: solid dashed solid solid;
+}
+.projects_list .content{
+    border: 2px white;
+    border-style: solid solid solid dashed;
 }
 .projects_list .title{
     font-size: larger;
 }
 .projects_list .title:hover{
     color: rgb(0, 255, 170);
-    text-decoration: underline;
+    text-decoration: underline rgb(0, 255, 170) dashed;
 }
 #Houdina_Img{
-    width: 60%;
+    width: 40%;
+}
+#BHSchool_Img{
+    width: 55%;
 }
 #Wordle_Img{
-    width: 60%;
+    width: 40%;
+}
+
+/* -------------------- PERSONAL -------------------- */
+#Website_Img{
+    width: 85%;
+}
+#UnknownLink{
+    transition: 0.5s;
+    color: rgb(0, 255, 170);
+    text-decoration: underline rgb(0, 255, 170) dashed;
+}
+#UnknownLink:hover, #UnknownLink:focus{
+    color: white;
+    text-decoration-color: white;
 }

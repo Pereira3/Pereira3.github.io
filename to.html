@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <title>Pereira3 -> About Me</title>
+        <title>Pereira3 -> About Tó</title>
         <!-- Import CSS -->
         <link rel="stylesheet" href="./styles/index.css">
         <!-- Import Icons -->
@@ -37,25 +37,24 @@
                 <div class="content">
                     <div class="pfp_image">
                         <img src="./images/ToPFP.jpg" id="pfp">
-                        <div class="media">
-                            <a href="https://github.com/Pereira3" id="ref_github" target="_blank"><img src="./images/GitHub.png" id="icon_github"></a>
-                            <a href="https://www.linkedin.com/in/ricardopereira03/" id="ref_linkedin" target="_blank"><img src="./images/LinkedIn.png" id="icon_linkedin"></a>
-                        </div>
                         <div class="hello_gif" id="helloTo" style="display: none;"><img src="./images/hello.gif"></div>
                     </div>
                     <div class="main_part">
-                        Hello there! &#128075; <br><br>
-                        My name is Ricardo Pereira and I am currently finishing my degree in Computer Engineering. <br><br>
-                        At the time, I have not yet created any project for my portfolio,
-                        the projects presented that I developed were carried out to complete some subjects,
-                        with "Houdina" being a project carried out in a group where I was responsible for a large part of the interface style 
-                        and developed the code presented in the folder 'Carros'. <br><br>
-                        What I've most enjoyed doing to date has been work related to cybersecurity or full-stack development.<br><br>
-                        This little guy on the left is called Tó.<br>
-                        Tó was a well-known public figure in my group and that's why he remains honored on my github/website.<br><br>
-                        <button class="button_to" id="button_to" type="button" onclick="helloTo()">Say hello to Tó</button>
-                        &emsp;<a href="to.html"><button class="button_to" id="button_moreofto" type="button">More of Tó</button><br><br></a>
+                        Bone Jour folks! &#128128; <br><br>
+                        My name is Tó and I am a computer engineer. <br><br>
+                        Tibia honest, this wasn't the future I wanted.
+                        I wanted to be a gravedigger or a gardener, because I really like bone-zai trees, but my parents didn't let me follow my ambitions, so I had to pick a bone.
+                        In my journey during university I was bonely but luckily I found a group of friends where I felt like I fit in.<br><br>
+                        In my free time I like listening to Bone Jovi and Bone Iver, going to museums to see skulltures.<br>
+                        My favorite movie is Thoracic Park, my favorite fruit is spineapple and the spice I use most is cinnabone.<br><br>
+                        The main soft skill that I consider having in a group is being a bone leader.<br><br>
+                        <button class="button_to" id="button_to" type="button" onclick="changetoPic()">More Skelfies</button>
+                        &emsp;<a href="index.html"><button class="button_to" id="button_moreofto" type="button">Return</button><br><br></a>
                     </div>
+                </div>
+                <div class="media">
+                    <a href="https://github.com/Pereira3" id="ref_github" target="_blank"><img src="./images/GitHub.png" id="icon_github"></a>
+                    <a href="https://www.linkedin.com/in/ricardopereira03/" id="ref_linkedin" target="_blank"><img src="./images/LinkedIn.png" id="icon_linkedin"></a>
                 </div>
             </main>
         </div>
@@ -86,14 +85,26 @@
         }
     }
 
-    function helloTo() {
-        var helloGif = document.getElementById("helloTo");
+    // Initialize counter
+    let counter = 0;
 
-        if(helloGif.style.display === "none"){
-            helloGif.style.display = "block";
-            setTimeout(function() {
-                helloGif.style.display = "none";
-            }, 2000);
-        }
+    function changetoPic(){
+        const to_pics = ['./images/ToPFP.jpg', './images/To/1.jpg', './images/To/2.jpg', './images/To/3.jpg', './images/To/4.jpg', './images/To/5.jpg', './images/To/6.jpg', './images/To/7.jpg', './images/To/8.jpg'];
+
+        var pic = document.getElementById("pfp");
+
+        pic.style.opacity = 0.5;
+
+        // Trigger the animation
+        pfp.classList.add("animate");
+        // Increment the counter
+        counter++;
+        // Rest of the division between counter and 8
+        pic.src = to_pics[counter % to_pics.length];
+
+        setTimeout(function(){
+            pic.style.opacity = 1;
+            pfp.classList.remove("animate");
+        }, 200);
     }
 </script>
